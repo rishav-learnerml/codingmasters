@@ -1,0 +1,23 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://root:@localhost/coders",
+    "prod_uri": "mysql+pymysql://root:@localhost/coders",
+    "fb_url": "https://www.facebook.com/rishav.chatterjee.940",
+    "in_url": "https://www.linkedin.com/in/rishav-chatterjee-384505173/",
+    "git_url": "https://github.com/rishav-learnerml",
+    "site_logo": "TheCodingMasters",
+    "site_title": "Coding Masters",
+    "tag_line": "Guidance for upcoming coders",
+    "gmail-user": "rishav.blogapp@gmail.com",
+    "gmail-password": "@Rishav182133#",
+    "about_text1": "Hello Friends!! I'm Rishav Chatterjee, a Full Stack developer, a Certified Machine Learning Engineer as well as a Data-Scientist. If you are Looking for a mentor, If you are eager to start your Coding Journey, If you don't know how and from where to start, Then You're at the right place...I'll Try my best to guide you from Start to End!!",
+    "about_text2":" Machine Learning and Full Stack development means a lot in today's market! From the last two years I've been roaming through various fields of technology and trying to explore more, I'm eager to share my knowledge with You guys!!",
+    "about_text3":" While working with these modern technologies, I've developed various projects, Starting from personal voice assistant to full stack mobile apps and websites. I'm also working with Famous Companies to build websites/app for them.I'm very much exited to guide you throughout your entire Journey!!!",
+    "login_image": "blacklogo.png",
+    "no_of_posts": 3,
+    "admin_user":"rishav",
+    "admin_password":"hello",
+    "upload_location": "C:\\Users\\Dell\\PycharmProjects\\Python Flask Practices"
+  }
+}

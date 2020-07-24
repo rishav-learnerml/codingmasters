@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header -->
+
+<header class="masthead img-fluid"
+    style="background-image: url('{{ url_for('static', filename='img/admin-bg.jpg') }}')">
+
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Welcome Back!! Manage Your Posts and Change them</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 style="margin-top: 30px;">Basic Options</h1>
+        <br>
+        <a href="/dashboard"><button class="btn btn-primary">Dashboard Home</button></a>
+        <a href="/logout"><button class="btn btn-danger">Log Out</button></a>
+        <br>
+        <hr>
+
+            <h1>Add/Edit Posts :</h1>
+
+            <form name="sentMessage" id="contactForm" action="/edit/{{sno}}" method="post" novalidate>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Title</label>
+                        <input name="title" type="text" class="form-control" placeholder="Title" id="title" required
+                            data-validation-required-message="Please enter the Title." value="{{post.title}}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Sub Title</label>
+                        <input name="sub_title" type="text" class="form-control" placeholder="Add a Tagline"
+                            id="sub_title" value="{{post.sub_title}}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Author Name</label>
+                        <input name="author" type="text" class="form-control" placeholder="Your Name" id="author"
+                            required data-validation-required-message="Please enter your Name." value="{{post.author}}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Slug</label>
+                        <input name="slug" type="text" class="form-control" placeholder="Slug" id="slug" required
+                            data-validation-required-message="Please enter your Post-Slug." value="{{post.slug}}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Post Content</label>
+                        <textarea name="content" rows="5" class="form-control" placeholder="Post-Content" id="content"
+                            required data-validation-required-message="Please enter a message." >{{post.content}}</textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Choose Image File</label>
+                        <form action="/uploader" method="post" enctype="multipart/form-data">
+                        <h5 class="text-muted">Image:</h5><input type="file" name="img_file" class="form-control" placeholder="Image file-name"
+                            id="img_file" value="{{post.img_file}}"/>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" id="sendMessageButton" onsubmit="handleSubmit()">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script type="text/javascript">
+    handleSubmit = () =>{
+        alert("Your Post was updated Succesfully!!!")
+    }
+</script>
